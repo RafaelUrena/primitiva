@@ -9,6 +9,7 @@
                 var usuario;
                 var maquina;
                 var serepite = false;
+                var coinciden = 0;
                 
                 usuario = numerousuario();
                 
@@ -17,9 +18,22 @@
                 if(serepite){
                     alert("Número repetido, porfavor introduzca otro");
                 } else{
-                    document.write("Tus números: " + usuario.toString() + "<br>");
-                    maquina = generarmaquina();
-                    document.write("Números de la máquina: " + maquina.toString() + "<br>");
+//                    document.write("Tus números: " + usuario.toString() + "<br>");
+//                    document.write("Números de la máquina: " + maquina.toString() + "<br>");
+
+                     maquina = generarmaquina();
+                     
+                     //Se comprueba cuantos números coinciden
+                     for (var i = 0; i < usuario.length; i++) {
+                         for (var j = 0; j < maquina.length; j++) {
+                             if(usuario[i] === maquina[j]){
+                                 coinciden++;
+                             }
+                         }
+            
+                    }
+                     
+                     
                 }
 
                 
