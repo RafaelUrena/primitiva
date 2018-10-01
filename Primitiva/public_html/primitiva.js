@@ -10,12 +10,13 @@
                 var maquina;
                 var serepite = false;
                 
-                serepite = serepiten();
+                usuario = numerousuario();
+                
+                serepite = serepiten(usuario);
                 
                 if(serepite){
                     alert("Número repetido, porfavor introduzca otro");
                 } else{
-                    usuario = numerousuario();
                     document.write("Tus números: " + usuario.toString() + "<br>");
                     maquina = generarmaquina();
                     document.write("Números de la máquina: " + maquina.toString() + "<br>");
@@ -68,12 +69,11 @@
         }
     }
     
-    function serepiten(){
+    function serepiten(numusuario){
         var soniguales = false;
-        var numusuario = numerousuario();
         
         for (var i = 0; i < 5; i++) {
-            for (var j = 1; j < 6; j++) {
+            for (var j = i+1; j < 6; j++) {
                 if(numusuario[i] === numusuario[j]){
                     soniguales = true;
                 }
