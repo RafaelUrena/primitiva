@@ -13,22 +13,29 @@ and open the template in the editor.
     </head>
     <body>
         <div>
-            <form name="formul" method="POST" id="datosper">
+            <form name="formul" method="GET" id="datosper" action="persona.html">
                 <fieldset>
                     <legend>Datos personales</legend>
-                <p>DNI: <input type="text" name="dni" value="" /></p>
-                <p>Nombre: <input type="text" name="nombre" value="" /></p>
-                <p>Apellidos: <input type="text" name="apellidos" value="" /></p>
+                    <p>DNI:&nbsp;<input type="text" name="dnii" value="" id="dni" maxlength="9" placeholder="Ponga el DNI(sin letra)" onblur="comprobardni()" /></p>
+                    <p>Nombre:&nbsp;<input type="text" name="nombre" value="" maxlength="30" placeholder="Escriba su Nombre" /></p>
+                    <p>Apellidos:&nbsp;<input type="text" name="apellidos" value="" maxlength="30" placeholder="Escriba su Apellido" /></p>
                 <fieldset>
                     <legend>Sexo</legend>
                     <p>Hombre<input type="radio" name="sexo" value="hombre" checked="" /></p>
                     <p>Mujer<input type="radio" name="sexo" value="mujer" /></p>
                 </fieldset>
-                <p>Domicilio: <input type="text" name="domicilio" value="" /></p>
-                <p>C.P: <input type="number" name="codigopostal" value="" /></p>
-                <p>Fecha Nacimiento: <input type="date" name="fechanacimiento" value="" /></p>
-                <p>Nº Hijos: <input type="number" name="nhijos" value="" /></p>
-                <input type="button" value="Comprobar" name="comp" onclick=""/>
+                    <p>Domicilio:&nbsp;<input type="text" name="domicilio" value="" maxlength="50" placeholder="Ej: C/Falsa Nº123" /></p>
+                    <p>C.P:&nbsp;<input type="number" name="codigopostal" value="" placeholder="Codigo Postal" /></p>
+                <p>Provincia <select>
+                        <option value="Albacete">Albacete</option>
+                        <option value="Ciudad Real">Ciudad Fecal</option>
+                        <option value="Cuenca">Cuenca</option>
+                        <option value="Guadalajara">Guadalajara</option>
+                        <option value="Toledo">Tolerdo</option>
+                    </select></p>
+                <p>Fecha Nacimiento:&nbsp;<input type="date" name="fechanacimiento" value="" /></p>
+                <p>Nº Hijos:&nbsp;<input type="number" name="nhijos" value="" /></p>
+                <input type="submit" value="Comprobar" name="comp" />
                 </fieldset>
             </form>
         </div>
